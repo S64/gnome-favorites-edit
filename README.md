@@ -1,6 +1,6 @@
 # gnome-favorites-edit
 
-[![CircleCI](https://circleci.com/gh/S64/gnome-favorites-edit.svg?style=svg)](https://circleci.com/gh/S64/gnome-favorites-edit)
+[![Snap Status](https://build.snapcraft.io/badge/S64/gnome-favorites-edit.svg)](https://build.snapcraft.io/user/S64/gnome-favorites-edit) [![CircleCI](https://circleci.com/gh/S64/gnome-favorites-edit.svg?style=svg)](https://circleci.com/gh/S64/gnome-favorites-edit)
 
 CLI app of dash favorites editor for gnome-shell.
 
