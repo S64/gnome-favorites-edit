@@ -1,0 +1,24 @@
+defaults: &defaults
+  working_directory: ~/workspace
+  docker:
+    - image: snapcore/snapcraft:edge
+version: 2
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+jobs:
+  build:
+    <<:  *defaults
+    steps:
+      - checkout
+      - run:
+        name: Update apt
+        command: apt update
+      - run:
+          name: Build snap
+          command: snapcraft
+      - persist_to_workspace:
+          root: ~/workspace
+          paths: [*.snap]
