@@ -11,8 +11,8 @@ apps:
     command: bin/gnome-favorites-edit
     environment:
       GI_TYPELIB_PATH: $SNAP/usr/lib/girepository-1.0:$SNAP/usr/lib/x86_64-linux-gnu/girepository-1.0
-#    plugs:
-#      - gsettings
+    plugs:
+      - gsettings
 
 parts:
   gnome-favorites-edit-cli:
