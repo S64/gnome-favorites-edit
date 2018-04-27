@@ -21,11 +21,13 @@ def main():
         if already:
             if not args.ignore_errors: raise RuntimeError('Already added.')
         else:
-            schema.set_value('favorite-apps', GLib.Variant('as', values + [args.app]))
+            values += [args.app]
+            schema.set_value('favorite-apps', GLib.Variant('as', values))
     elif args.mode == 'remove':
         if not already:
             if not args.ignore_errors: raise RuntimeException('Not in favorites.')
         else:
-            schema.set_value('favorite-apps', GLib.Variant('as', filter(lambda x: x != args.app, values)))
+            values.remove(args.app)
+            schema.set_value('favorite-apps', GLib.Variant('as', values))
 
 if __name__ == '__main__': main()
