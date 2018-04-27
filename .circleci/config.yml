@@ -19,9 +19,12 @@ jobs:
       - run:
           name: Build snap
           command: snapcraft
+      - run:
+          name: Move artifacts
+          command: "mkdir ./out && cp *.snap ./out/"
+      - store_artifacts:
+          path: /out
       - persist_to_workspace:
           root: ~/workspace
           paths:
-            - "*.snap"
-      - store_artifacts:
-          path: "*.snap"
+            - /out
