@@ -11,6 +11,7 @@ apps:
     command: bin/gnome-favorites-edit
     environment:
       GI_TYPELIB_PATH: $SNAP/usr/lib/girepository-1.0:$SNAP/usr/lib/x86_64-linux-gnu/girepository-1.0
+      GIO_EXTRA_MODULES: $SNAP/usr/lib/x86_64-linux-gnu/gio/modules
     plugs:
       - gsettings
 
@@ -22,4 +23,5 @@ parts:
       - libgirepository1.0-dev
       - gir1.2-glib-2.0
       - python3-gi
+      - dconf-gsettings-backend
     source: ./src/
