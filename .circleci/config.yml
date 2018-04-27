@@ -21,4 +21,5 @@ jobs:
           command: snapcraft
       - persist_to_workspace:
           root: ~/workspace
-          paths: [*.snap]
+          paths:
+            - "*.snap"
