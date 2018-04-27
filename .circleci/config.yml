@@ -14,8 +14,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Update apt
-        command: apt update
+          name: Update apt
+          command: apt update
       - run:
           name: Build snap
           command: snapcraft
