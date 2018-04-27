@@ -25,7 +25,7 @@ def main():
             schema.set_value('favorite-apps', GLib.Variant('as', values))
     elif args.mode == 'remove':
         if not already:
-            if not args.ignore_errors: raise RuntimeException('Not in favorites.')
+            if not args.ignore_errors: raise RuntimeError('Not in favorites.')
         else:
             values.remove(args.app)
             schema.set_value('favorite-apps', GLib.Variant('as', values))
