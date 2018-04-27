@@ -23,5 +23,5 @@ jobs:
           root: ~/workspace
           paths:
             - "*.snap"
-      - store_artifacts
+      - store_artifacts:
           path: "*.snap"
