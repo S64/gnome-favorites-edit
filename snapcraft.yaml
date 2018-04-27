@@ -3,7 +3,7 @@ version: 0.0.1
 summary: Edit dash favorites of gnome-shell.
 description: |
   CLI app of dash favorites editor for gnome-shell.
-grade: candidate
+grade: stable
 confinement: classic
 architectures:
   - amd64
