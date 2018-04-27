@@ -1,5 +1,7 @@
 # gnome-favorites-edit
 
+[![CircleCI](https://circleci.com/gh/S64/gnome-favorites-edit.svg?style=svg)](https://circleci.com/gh/S64/gnome-favorites-edit)
+
 CLI app of dash favorites editor for gnome-shell.
 
 # Usages
