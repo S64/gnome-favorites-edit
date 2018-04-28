@@ -3,7 +3,7 @@ version: 0.0.1
 summary: Edit dash favorites of gnome-shell.
 description: |
   CLI app of dash favorites editor for gnome-shell.
-grade: stable
+grade: edge
 confinement: classic
 architectures:
   - amd64
@@ -14,8 +14,8 @@ apps:
     environment:
       GI_TYPELIB_PATH: $SNAP/usr/lib/girepository-1.0:$SNAP/usr/lib/x86_64-linux-gnu/girepository-1.0
       GIO_EXTRA_MODULES: $SNAP/usr/lib/x86_64-linux-gnu/gio/modules
-    plugs:
-      - gsettings
+#    plugs:
+#      - gsettings
 
 parts:
   gnome-favorites-edit-cli:
