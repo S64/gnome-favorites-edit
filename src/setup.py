@@ -1,4 +1,13 @@
 from setuptools import setup
+import subprocess
+
+class CustomInstallCommand(install):
+    def run(self):
+        print('Compile gsettings schemas')
+        subprocess.run(['/usr/lib/x86_64-linux-gnu/glib-2.0/glib-compile-schemas', os.environ['GSETTINGS_SCHEMA_DIR']])
+        print('Execute install')
+        install.run(self)
+
 
 setup(
     name = 'gnome-favorites-edit',
@@ -11,5 +20,8 @@ setup(
         'console_scripts': [
             'gnome-favorites-edit=gnome_favorites_edit.main:main',
         ]
+    },
+    cmdclass = {
+        'install': CustomInstallCommand,
     }
 )
