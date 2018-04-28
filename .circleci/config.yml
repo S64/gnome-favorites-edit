@@ -17,7 +17,7 @@ jobs:
           name: Build .rpm package
           command: python setup.py bdist_rpm
       - store_artifacts:
-        path: ./
+          path: ./
   build-ubuntu:
     working_directory: ~/ubuntu
     docker:
@@ -29,4 +29,4 @@ jobs:
           name: Build .deb package
           command: python setup.py --command-packages=stdeb.command bdist_deb
       - store_artifacts:
-        path: ./
+          path: ./
