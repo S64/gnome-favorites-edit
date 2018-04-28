@@ -1,6 +1,1 @@
-/parts
-/prime
-/snap
-/stage
-*.snap
-/*_source.tar.bz2
+.DS_Store
