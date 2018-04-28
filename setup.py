@@ -6,7 +6,7 @@ setup(
     description = 'Edit dash favorites of gnome-shell.',
     author = 'Shuma Yoshioka',
     author_email = 's64.stdio@gmail.com',
-    url = 'https://github.com/S64/gnome-favorites-edit',
+    url = 'https://github.com/S64/gnome-favorites-edit'
     packages = ['gnome_favorites_edit'],
     entry_points = {
         'console_scripts': [
