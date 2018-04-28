@@ -4,7 +4,7 @@ summary: Edit dash favorites of gnome-shell.
 description: |
   CLI app of dash favorites editor for gnome-shell.
 grade: stable
-confinement: classic
+confinement: devmode
 architectures:
   - amd64
 
@@ -19,6 +19,8 @@ apps:
 
 parts:
   gnome-favorites-edit-cli:
+    after:
+      - desktop-gtk3
     plugin: python
     python-version: python3
     stage-packages:
@@ -26,4 +28,5 @@ parts:
       - gir1.2-glib-2.0
       - python3-gi
       - dconf-gsettings-backend
+      - gnome-shell-common
     source: ./src/
