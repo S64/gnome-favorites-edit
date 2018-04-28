@@ -11,12 +11,22 @@ jobs:
     docker:
       - image: alanfranz/docker-rpm-builder-configurations:fedora-27
     steps:
+      - run: dnf update -y
       - checkout
-      - run: echo 'Hello from fedora image!'
+      - run:
+          name: Build .rpm package
+          command: python setup.py bdist_rpm
+      - store_artifacts:
+        path: ./
   build-ubuntu:
     working_directory: ~/ubuntu
     docker:
       - image: debuild/trusty
     steps:
+      - run: apt-get update && apt-get dist-upgrade -y
       - checkout
-      - run: echo 'Hello from ubuntu image!'
+      - run:
+          name: Build .deb package
+          command: python setup.py --command-packages=stdeb.command bdist_deb
+      - store_artifacts:
+        path: ./
