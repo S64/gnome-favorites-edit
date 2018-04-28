@@ -21,9 +21,9 @@ jobs:
   build-ubuntu:
     working_directory: ~/ubuntu
     docker:
-      - image: debuild/trusty
+      - image: library/ubuntu:bionic
     steps:
-      - run: sudo apt-get update && apt-get dist-upgrade -y
+      - run: apt-get update && apt-get dist-upgrade -y
       - checkout
       - run:
           name: Build .deb package
