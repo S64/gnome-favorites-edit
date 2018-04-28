@@ -1,0 +1,22 @@
+version: 2
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build-fedora
+      - build-ubuntu
+jobs:
+  build-fedora:
+    working_directory: ~/fedora
+    docker:
+      - image: alanfranz/docker-rpm-builder-configurations:fedora-27
+    steps:
+      - checkout
+      - run: echo 'Hello from fedora image!'
+  build-ubuntu:
+    working_directory: ~/ubuntu
+    docker:
+      - image: debuild/trusty
+    steps:
+      - checkout
+      - run: echo 'Hello from ubuntu image!'
