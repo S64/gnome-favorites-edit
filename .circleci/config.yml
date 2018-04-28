@@ -24,7 +24,9 @@ jobs:
       - image: library/ubuntu:bionic
     steps:
       - run: apt-get update && apt-get dist-upgrade -y
-      - apt-get install python-setuptools python-stdeb
+      - run:
+          name: Install build depends
+          command: apt-get install python-setuptools python-stdeb
       - checkout
       - run:
           name: Build .deb package
