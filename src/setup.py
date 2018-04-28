@@ -6,7 +6,7 @@ import subprocess
 class CustomInstallCommand(install):
     def run(self):
         print('Compile gsettings schemas')
-        subprocess.run(['/usr/lib/x86_64-linux-gnu/glib-2.0/glib-compile-schemas', os.environ['GSETTINGS_SCHEMA_DIR']])
+        subprocess.run(['/usr/lib/x86_64-linux-gnu/glib-2.0/glib-compile-schemas', '/usr/share/glib-2.0/schemas'])
         print('Execute install')
         install.run(self)
 
