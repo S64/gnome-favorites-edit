@@ -26,7 +26,7 @@ jobs:
       - run: apt-get update && apt-get dist-upgrade -y
       - run:
           name: Install build depends
-          command: apt-get install python-setuptools python-stdeb -y
+          command: apt-get install python python-setuptools python-stdeb -y
       - checkout
       - run:
           name: Build .deb package
