@@ -15,6 +15,7 @@ apps:
       GI_TYPELIB_PATH: $SNAP/usr/lib/girepository-1.0:$SNAP/usr/lib/x86_64-linux-gnu/girepository-1.0
       GIO_EXTRA_MODULES: $SNAP/usr/lib/x86_64-linux-gnu/gio/modules
       GSETTINGS_SCHEMA_DIR: $SNAP/usr/share/glib-2.0/schemas
+      GS_SCHEMA_DIR: $SNAP/usr/share/glib-2.0/schemas
     plugs:
       - gsettings
 
